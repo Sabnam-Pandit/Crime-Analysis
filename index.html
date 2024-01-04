@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapbox and p5.js</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  
+   <style>
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 800px;
+      height: 800px;
+    }
+    .p5Canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none; /* Make the canvas click-through */
+    }
+     
+     #infoPanel {
+    position: absolute; /* Absolute positioning to place it based on x and y coordinates */
+    z-index: 1000; /* High z-index to ensure it's on top of other elements */
+    background: white; /* White background for readability */
+    padding: 10px; /* Padding for some space inside the panel */
+    border: 1px solid black; /* A black border for visibility */
+    border-radius: 5px; /* Rounded corners for a nicer look */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* A subtle shadow for a layered effect */
+    display: none; /* Start with the panel hidden */
+    pointer-events: none; /* Prevents the panel from interfering with map interactions */
+    font-family: Arial, sans-serif; /* Font styling, can be adjusted as needed */
+    font-size: 14px; /* Font size */
+    color: #333; /* Font color */
+}
+  </style>
+</head>
+<body>
+     <div id="p5Container"></div>
+     <div id="map" style="width: 630px; height: 690px;"></div>
+  
+<div id="infoPanel" style="display:none; position:absolute; background:white; padding:10px; border:1px solid black;"></div>
+
+    <script>
+        function resizeMap() {
+            var mapDiv = document.getElementById('map');
+            mapDiv.style.width = window.innerWidth / 2 + 'px';
+            mapDiv.style.height =window.innerHeight- (window.innerHeight*0.1)+ 'px';
+        }
+
+        window.onload = resizeMap;
+        window.onresize = resizeMap;
+    </script>
+
+    <script src="sketch.js"></script>
+    <script src="states.js"></script>
+</body>
+</html>
+
