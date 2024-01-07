@@ -1,4 +1,4 @@
-const accessToken = 'pk.eyJ1Ijoic2FibmFtLTEyMyIsImEiOiJjbHBvdWtncWswc3l2Mm1xZmMyNXN3YTV4In0.7LB2sYih2vPViL5auiXKpQ';
+const accessToken = 'Your key';
 // let canvas_w = window;
 // let canvas_h = 800;
 let crimeData; // This will hold the loaded data
