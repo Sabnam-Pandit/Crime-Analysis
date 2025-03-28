@@ -4,9 +4,9 @@ This project is a **multivariate crime data visualization tool** built using **p
 
 ---
 
-## 🖼️ User Interface Snapshot
+## User Interface Snapshot
 
-![Crime Data Visualization UI](./assets/crime-viz-ui.png)  
+![Crime Data Visualization UI](./featured.png)  
 *A preview of the application interface showing map-based state selection, time series plots, and dynamic charts.*
 
 ---
@@ -30,5 +30,5 @@ This project is a **multivariate crime data visualization tool** built using **p
 
 ---
 
-## 📁 Project Structure
+
 
